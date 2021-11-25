@@ -49,6 +49,7 @@
         .FriedmEnev_anchor {
             height: 96%;
             color: #fff;
+            -webkit-text-stroke: 1px #000;
             font-size: 24px;
             display: flex;
             justify-content: center;
@@ -66,6 +67,7 @@
                 width: 16px;
                 background: #fff;
                 color: #000;
+                -webkit-text-stroke: initial;
                 text-align: center;
                 line-height: 15px;
                 font-size: 12px;
@@ -191,10 +193,6 @@
 .FriedmEnev_arrow .FriedmEnev_anchor, #detail .FriedmEnev_arrow .FriedmEnev_anchor {
     color: #fff !important;
 }
-.article_details_bottom {
-    border-top: 1px solid @border-color;
-    .unitize(padding-top, 5);
-}
 .entry--enev .FriedmEnev_arrow {
     .image-slider--item{
         cursor: inherit;
@@ -207,10 +205,20 @@
     }
 }
 
+.product--badges {
+    .FriedmEnev_datasheet {
+        font-size: 0.7rem;
+    }
+}
+
 
 @media screen and (min-width: 48em) {
     .tooltipster-default {
         width: 312px;
         height: 624px;
     }
+}
+
+.FriedmEnev_detail_arrow {
+    .unitize-margin(15, 0);
 }

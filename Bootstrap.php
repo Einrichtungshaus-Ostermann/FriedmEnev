@@ -70,7 +70,7 @@ class Shopware_Plugins_Frontend_FriedmEnev_Bootstrap extends Shopware_Components
      */
     public function getVersion()
     {
-        return '1.3.14';
+        return '1.3.16';
     }
 
     /**
@@ -246,12 +246,18 @@ class Shopware_Plugins_Frontend_FriedmEnev_Bootstrap extends Shopware_Components
         ]);
         $form->setElement('textfield', 'klasse', [
             'label' => 'Effizienzklassen',
-            'value' => 'A;B;C;D;F;G',
+            'value' => 'A;B;C;D;E;F;G',
             'scope' => \Shopware\Models\Config\Element::SCOPE_SHOP
         ]);
         $form->setElement('textfield', 'color', [
             'label' => 'Farben',
             'value' => '006c38;018c3b;abd602;ffdf01;ff8c08;fe1d01;ee0012',
+            'scope' => \Shopware\Models\Config\Element::SCOPE_SHOP
+        ]);
+        $form->setElement('boolean', 'allviewsDatasheet', [
+            'label' => 'Produktdatenblatt überall anzeigen',
+            'description' => 'Diese Einstellung ermöglicht es das Produktdatenblatt bei allen Ansichten anzuzeigen.',
+            'value' => 0,
             'scope' => \Shopware\Models\Config\Element::SCOPE_SHOP
         ]);
 
@@ -260,7 +266,8 @@ class Shopware_Plugins_Frontend_FriedmEnev_Bootstrap extends Shopware_Components
             'en_GB' => [
                 'arrowIllustration' => 'Illustration of the arrow',
                 'klasse' => 'Energy efficiency classes',
-                'color' => 'Colors'
+                'color' => 'Colors',
+                'allviewsDatasheet' => 'Display data sheet in all views'
             ]
         ];
         $shopRepository = Shopware()->Models()->getRepository('\Shopware\Models\Shop\Locale');
