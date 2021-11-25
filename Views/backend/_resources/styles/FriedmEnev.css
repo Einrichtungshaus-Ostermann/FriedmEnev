@@ -1,0 +1,23 @@
+.ext-color-picker-icon {
+	float: none;
+	position: absolute;
+	top: 6px;
+	left: 6px;
+	width: 16px;
+	height: 16px;
+	margin-right: 5px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+}
+.x-boundlist-item .ext-color-picker-icon {
+	top: 2px;
+}
+.ext-color-picker .x-form-text, .ext-color-picker-text {
+	padding-left:  22px !important;
+}
+.translatable-mediaselection .sprite-globe {
+	top: 8px !important;
+	right: 40px !important;
+	background-color: #fff !important;
+}
