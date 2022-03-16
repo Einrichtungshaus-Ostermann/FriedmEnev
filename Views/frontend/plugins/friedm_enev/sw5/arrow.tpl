@@ -14,9 +14,9 @@
                                         <br/>
                                     {/s}{$FriedmEnev.spectrumFrom} {s name="spectrumTo" namespace="frontend/plugins/FriedmEnev"}bis{/s} {$FriedmEnev.spectrum}
                                 {else}
-                                    {$FriedmEnev.spectrum}
-                                    <i class="icon--arrow-up5"></i>
                                     {$FriedmEnev.spectrumFrom}
+                                    <i class="icon--arrow-up5"></i>
+                                    {$FriedmEnev.spectrum}
                                 {/if}
                             </div>
                         {/if}
