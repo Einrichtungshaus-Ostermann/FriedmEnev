@@ -8,17 +8,19 @@
                     <div class="FriedmEnev_anchor">
                         {$FriedmEnev.klasse}
                         {if $FriedmEnev.spectrum}
-                            <div class="FriedmEnev_spectrum">
+                            {if $sArticle.attr41 == 0}
+                                <div class="FriedmEnev_spectrum">
                                 {if $FriedmEnev.config.arrowIllustration == 'arrowOld'}
                                     {s name="spectrum" namespace="frontend/plugins/FriedmEnev"}Spektrum
                                         <br/>
                                     {/s}{$FriedmEnev.spectrumFrom} {s name="spectrumTo" namespace="frontend/plugins/FriedmEnev"}bis{/s} {$FriedmEnev.spectrum}
                                 {else}
-                                    {$FriedmEnev.spectrumFrom}
-                                    <i class="icon--arrow-up5"></i>
-                                    {$FriedmEnev.spectrum}
+                                        {$FriedmEnev.spectrumFrom}
+                                        <i class="icon--arrow-up5"></i>
+                                        {$FriedmEnev.spectrum}
                                 {/if}
                             </div>
+                            {/if}
                         {/if}
                     </div>
                 </div>
