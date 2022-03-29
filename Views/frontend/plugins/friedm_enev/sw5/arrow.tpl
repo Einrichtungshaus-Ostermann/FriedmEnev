@@ -8,7 +8,7 @@
                     <div class="FriedmEnev_anchor">
                         {$FriedmEnev.klasse}
                         {if $FriedmEnev.spectrum}
-                            {if $sArticle.attr41 == 1}
+                            {if $FriedmEnevValue.spectrumFrom == 'A'}
                                 <div class="FriedmEnev_spectrum">
                                 {if $FriedmEnev.config.arrowIllustration == 'arrowOld'}
                                     {s name="spectrum" namespace="frontend/plugins/FriedmEnev"}Spektrum
