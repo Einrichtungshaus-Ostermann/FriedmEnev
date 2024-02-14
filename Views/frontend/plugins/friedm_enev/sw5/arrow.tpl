@@ -1,6 +1,11 @@
 {block name='frontend_plugins_friedmenev_sw5_arrow'}
     {if $FriedmEnev.active}
         <div class="FriedmEnev_container_arrow_body">
+            <div class="Mo-FriedmEnev_container_arrow_image">
+                <img title="{$FriedmEnev.type}" alt="{$FriedmEnev.type}"
+                      src="{link file='frontend/_public/src/img/plp/icons-enev-38x38px-'|cat:$FriedmEnev.type|cat:'.svg'}"
+                />
+            </div>
             <div class="FriedmEnev_container_arrow">
                 <div class="FriedmEnev_arrow gbmed-enev-{$FriedmEnev.config.arrowIllustration}"
                      style="background:#{$FriedmEnev.color};color:#{$FriedmEnev.color};"{if strlen($FriedmEnev.image)} data-friedmenev-label="{link file=$FriedmEnev.image}"{/if}
