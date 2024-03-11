@@ -26,6 +26,10 @@
     .FriedmEnev_arrow:not(.gbmed-enev-arrowOld) .FriedmEnev_anchor {
         height: 94%;
         top: 3%;
+
+        .FriedmEnev_spectrum {
+            top: 1px;
+        }
     }
 
     .FriedmEnev_arrow {
@@ -37,4 +41,21 @@
 
 .product--box.box--basic:has(.mo-friedm_env-arrow-wrapper) .product--title {
     margin-bottom: 0 !important;
+}
+
+@media screen and (max-width: @tabletLandscapeViewportWidth) {
+    .mo-friedm_env-arrow-wrapper {
+        flex-wrap: wrap;
+        .FriedmEnev_container_arrow_body {
+            margin: 5px 5px 0 5px;
+        }
+    }
+
+    .mo-friedm_env-arrow-wrapper {
+        height: 120px;
+    }
+
+    body.is--ctl-listing section.content-main div.content-main--inner div.content.listing--content:has(.mo-friedm_env-arrow-wrapper) .product--box .delivery--container {
+        height: 83px;
+    }
 }
