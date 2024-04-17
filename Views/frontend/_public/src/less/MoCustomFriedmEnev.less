@@ -1,6 +1,7 @@
 .mo-friedm_env-arrow-wrapper {
     display: flex;
     justify-content: flex-start;
+    margin-top: 10px;
 
     &:has(.FriedmEnev_container_arrow_body) ~ .configurable--container,
     &:has(.FriedmEnev_container_arrow_body) ~ .delivery--container {
@@ -26,15 +27,16 @@
     .FriedmEnev_arrow:not(.gbmed-enev-arrowOld) .FriedmEnev_anchor {
         height: 94%;
         top: 3%;
+        font-size: 34px;
 
         .FriedmEnev_spectrum {
-            top: 1px;
+            top: -1px;
         }
     }
 
     .FriedmEnev_arrow {
-        scale: .6;
-        top: -10px;
+        scale: .5;
+        top: -8px;
         left: 3px;
     }
 }
@@ -56,6 +58,12 @@
     }
 
     body.is--ctl-listing section.content-main div.content-main--inner div.content.listing--content:has(.mo-friedm_env-arrow-wrapper) .product--box .delivery--container {
-        height: 83px;
+        height: 93px;
+    }
+}
+
+@media screen and (min-width: @tabletLandscapeViewportWidth) {
+    body.is--ctl-listing section.content-main div.content-main--inner div.content.listing--content:has(.mo-friedm_env-arrow-wrapper) div.product--box:not(:has(.mo-friedm_env-arrow-wrapper)) div.box--content div.product--info .product--price-info {
+        margin-top: 15px;
     }
 }
