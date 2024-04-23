@@ -319,7 +319,8 @@ class Shopware_Plugins_Frontend_FriedmEnev_Bootstrap extends Shopware_Components
             [],
             [
                 $this->Path() . 'Views/frontend/_public/src/less/tooltipster.less',
-                $this->Path() . 'Views/frontend/_public/src/less/FriedmEnev.less'
+                $this->Path() . 'Views/frontend/_public/src/less/FriedmEnev.less',
+                $this->Path() . 'Views/frontend/_public/src/less/MoCustomFriedmEnev.less'
             ]
         );
 
