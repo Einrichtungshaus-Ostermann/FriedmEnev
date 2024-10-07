@@ -1,7 +1,11 @@
 .mo-friedm_env-arrow-wrapper {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     margin-top: 10px;
+
+    .FriedmEnev_arrow:not(.gbmed-enev-arrowOld)::before {
+        left: 1%;
+    }
 
     &:has(.FriedmEnev_container_arrow_body) ~ .configurable--container,
     &:has(.FriedmEnev_container_arrow_body) ~ .delivery--container {
@@ -57,13 +61,41 @@
         height: 120px;
     }
 
-    body.is--ctl-listing section.content-main div.content-main--inner div.content.listing--content:has(.mo-friedm_env-arrow-wrapper) .product--box .delivery--container {
-        height: 93px;
+    body.is--ctl-listing section.content-main div.content-main--inner div.content.listing--content:has(.mo-friedm_env-arrow-wrapper),
+    body.is--ctl-search section.content-main div.content-main--inner div.content.search--content:has(.mo-friedm_env-arrow-wrapper) {
+        .product--box .delivery--container {
+            height: 93px;
+        }
     }
 }
 
 @media screen and (min-width: @tabletLandscapeViewportWidth) {
-    body.is--ctl-listing section.content-main div.content-main--inner div.content.listing--content:has(.mo-friedm_env-arrow-wrapper) div.product--box:not(:has(.mo-friedm_env-arrow-wrapper)) div.box--content div.product--info .product--price-info {
-        margin-top: 15px;
+    body.is--ctl-listing section.content-main div.content-main--inner div.content.listing--content:has(.mo-friedm_env-arrow-wrapper),
+    body.is--ctl-search section.content-main div.content-main--inner div.content.search--content:has(.mo-friedm_env-arrow-wrapper)
+    {
+        div.product--box:not(:has(.mo-friedm_env-arrow-wrapper)) div.box--content div.product--info .product--price-info {
+            margin-top: 15px;
+        }
+    }
+}
+
+.last-seen-products:has(.FriedmEnev_container_arrow_body) {
+    .last-seen-products-item--title + .product--price {
+        margin-top: 66px;
+    }
+}
+
+@media screen and (max-width: @tabletLandscapeViewportWidth) {
+    .last-seen-products:has(.FriedmEnev_container_arrow_body) {
+        .last-seen-products-item--title + .product--price {
+            margin-top: 130px;
+        }
+        .product--price {
+            .unitize(right, 48);
+
+            .product--box .price--default:not(.is--discount) {
+                .unitize(margin-top, 24);
+            }
+        }
     }
 }

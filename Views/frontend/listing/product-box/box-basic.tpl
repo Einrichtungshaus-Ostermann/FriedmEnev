@@ -5,7 +5,7 @@
         {if count($sArticle.FriedmEnev)}
             <div class="mo-friedm_env-arrow-wrapper">
                 {foreach $sArticle.FriedmEnev as $FriedmEnevKey => $FriedmEnevValue}
-                    {include file='frontend/plugins/friedm_enev/sw5/arrow.tpl' FriedmEnev=$FriedmEnevValue}
+                    {include file='frontend/plugins/friedm_enev/sw5/arrow.tpl' FriedmEnev=$FriedmEnevValue listingPage=true}
                 {/foreach}
             </div>
         {/if}
