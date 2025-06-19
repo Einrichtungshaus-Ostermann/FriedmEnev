@@ -11,6 +11,10 @@
     &:has(.FriedmEnev_container_arrow_body) ~ .delivery--container {
         display: none !important;
     }
+    &:has(:not(.FriedmEnev_container_arrow_image)) ~ .delivery--container {
+        display: block !important;
+        height: 20px !important;
+    }
     &:has(.FriedmEnev_container_arrow_body) ~ .product--price-info {
         margin-top: 0 !important;
     }
@@ -25,6 +29,10 @@
 
         .Mo-FriedmEnev_container_arrow_image {
             width: 30px;
+        }
+
+        &:has(:not(.FriedmEnev_container_arrow_image)) {
+            grid-template-rows: 30px;
         }
     }
 
@@ -59,6 +67,10 @@
 
     .mo-friedm_env-arrow-wrapper {
         height: 120px;
+
+        &:has(:not(.FriedmEnev_container_arrow_body)) {
+            height: 100px;
+        }
     }
 
     body.is--ctl-listing section.content-main div.content-main--inner div.content.listing--content:has(.mo-friedm_env-arrow-wrapper),
