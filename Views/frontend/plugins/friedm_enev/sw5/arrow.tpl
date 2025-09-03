@@ -2,13 +2,13 @@
     {if $FriedmEnev.active}
         <div class="FriedmEnev_container_arrow_body">
             {if $listingPage}
-                {if $FriedmEnev.type}
-                    <div class="Mo-FriedmEnev_container_arrow_image">
+                <div class="Mo-FriedmEnev_container_arrow_image">
+                    {if $FriedmEnev.type}
                         <img title="{$FriedmEnev.type}" alt="{$FriedmEnev.type}"
                              src="{link file='frontend/_public/src/img/plp/icons-enev-38x38px-'|cat:$FriedmEnev.type|cat:'.svg'}"
                         />
-                    </div>
-                {/if}
+                    {/if}
+                </div>
             {/if}
             <div class="FriedmEnev_container_arrow">
                 <div class="FriedmEnev_arrow gbmed-enev-{$FriedmEnev.config.arrowIllustration}"
